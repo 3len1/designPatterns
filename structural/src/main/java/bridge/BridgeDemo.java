@@ -13,4 +13,5 @@ public class BridgeDemo {
         LOGGER.info("Bridge example with messages. Have fun to try it!\n");
 
     }
+
 }
