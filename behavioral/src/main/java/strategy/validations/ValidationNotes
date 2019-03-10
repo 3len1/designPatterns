@@ -1,0 +1,21 @@
+Credit Card Validation Notes
+__________________________________________________________________________________________________________
+The first digit in your credit-card number signifies the system:
+
+3 - travel/entertainment cards (such as American Express and Diners Club)
+4 - Visa
+5 - MasterCard
+6 - Discover Card
+The structure of the card number varies by system.
+For example, American Express card numbers start with 37;
+Carte Blanche and Diners Club with 38.
+
+American Express - Digits three and four are type and currency, digits five through 11 are the account
+number, digits 12 through 14 are the card number within the account and digit 15 is a check digit.
+
+Visa - Digits two through six are the bank number, digits seven through 12 or seven through 15
+are the account number and digit 13 or 16 is a check digit.
+
+MasterCard - Digits two and three, two through four, two through five or two through six are the bank
+number (depending on whether digit two is a 1, 2, 3 or other). The digits after the bank
+number up through digit 15 are the account number, and digit 16 is a check digit.

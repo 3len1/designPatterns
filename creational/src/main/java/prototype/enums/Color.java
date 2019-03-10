@@ -1,0 +1,45 @@
+package prototype.enums;
+
+/**
+ * Created by 3len1 on 1/28/2019.
+ */
+public enum Color {
+    WHITE,
+    SILVER,
+    GREY,
+    BLACK,
+    NAVY,
+    BLUE,
+    CERULEAN,
+    SKY_BLUE,
+    TURQUOISE,
+    BLUE_GREEN,
+    AZURE,
+    TEAL,
+    CYAN,
+    GREEN,
+    LIME,
+    CHARTREUSE,
+    OLIVE,
+    YELLOW,
+    GOLD,
+    AMBER,
+    ORANGE,
+    BROWN,
+    ORANGE_RED,
+    RED,
+    MAROON,
+    ROSE,
+    RED_VIOLET,
+    PINK,
+    MAGENTA,
+    PURPLE,
+    BLUE_VIOLET,
+    INDIGO,
+    VIOLET,
+    PEACH,
+    APRICOT,
+    OCHRE,
+    PLUM,
+    UNKNOWN;
+}

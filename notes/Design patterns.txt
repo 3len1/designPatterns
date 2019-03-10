@@ -1,0 +1,36 @@
+Design Patterns categories
+_____________________________________________________
+
+1)Creational:
+Provide instantiation mechanisms, making it easier to create objects in a way that suits the situation.
+
+Abstract factory
+Builder
+Factory
+Prototype
+Singleton
+
+
+2)Behavioral:
+Used in communications between entities and make it easier and more flexible for these entities to communicate.
+
+Chain of responsibility
+Command
+Interpreter
+Iterator
+Mediator
+Memento
+Null object
+Observer
+
+
+3)Structural:
+Identifying a simple way to realize relationships between entities.
+
+Adapter
+Bridge
+Composite
+Decorator
+Facade
+Flyweight
+Proxy
