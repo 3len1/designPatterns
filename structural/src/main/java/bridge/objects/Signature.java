@@ -22,7 +22,7 @@ public class Signature {
         return contact == null ? title + "\n" :
                 title + "\n" + contact.getLastName() + " " +
                         contact.getFirstName() + " \nEmail: " + contact.getEmail() +
-                        "\n Phone: " + contact.getPhoneNumber() + "\n";
+                        "\nPhone: " + contact.getPhoneNumber() + "\n";
 
     }
 }
