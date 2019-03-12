@@ -24,7 +24,7 @@ public class MessagePrinter extends Printer {
         ));
 
         StringBuilder builder = new StringBuilder();
-        message.getReceivers().forEach( r -> {
+        message.getReceivers().forEach(r -> {
             builder.append(r.getEmail());
             builder.append("; ");
         });

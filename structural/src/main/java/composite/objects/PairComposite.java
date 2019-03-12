@@ -1,6 +1,8 @@
 package composite.objects;
 
-import composite.enums.Label;
+import composite.enums.Emotion;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
@@ -9,8 +11,14 @@ import java.util.List;
  */
 public class PairComposite extends Pair {
 
-    public PairComposite(Label label, String description) {
-        this.label = label;
+    private static final Logger LOGGER = LoggerFactory.getLogger(PairComposite.class);
+
+    public PairComposite(Emotion emotion) {
+        this.emotion = emotion;
+    }
+
+    public PairComposite(Emotion emotion, String description) {
+        this.emotion = emotion;
         this.description = description;
     }
 
@@ -39,18 +47,22 @@ public class PairComposite extends Pair {
         for (Pair child : getChildPairComponents()) {
             builder.append(child.toString());
         }
-
         return builder.toString();
     }
 
     @Override
     public boolean equals(Pair other) {
-        if (label != other.label) return false;
+        for (Pair child : getChildPairComponents()) {
+            if (!other.getChildPairComponents().contains(child))
+                return false;
+        }
+        if (emotion != other.emotion) return false;
         return description != null ? description.equals(other.description) : other.description == null;
     }
 
     @Override
     public void setDescription(String description) {
+        LOGGER.info("Description can be change only to parent pair");
         this.description = description;
     }
 }

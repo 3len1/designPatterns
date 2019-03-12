@@ -1,6 +1,6 @@
 package composite.objects;
 
-import composite.enums.Label;
+import composite.enums.Emotion;
 import lombok.Getter;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import java.util.List;
 public abstract class Pair {
     protected List<Pair> childPairComponents = new ArrayList<>();
     @Getter
-    Label label;
+    Emotion emotion;
     @Getter
     String description;
 
@@ -35,7 +35,7 @@ public abstract class Pair {
     public abstract void setDescription(String description);
 
     String print(Pair pairComponent) {
-        StringBuilder builder = new StringBuilder(pairComponent.getLabel().getString());
+        StringBuilder builder = new StringBuilder(this.getEmotion().getString());
         builder.append(": ");
         builder.append(pairComponent.getDescription());
         builder.append("\n");
