@@ -40,7 +40,7 @@ public enum Emotion {
     public static Emotion fromNumber(int num) {
         if (num > 0 && num < Emotion.values().length) {
             return Arrays.stream(Emotion.values())
-                    .filter(label -> label.getNum() == num).findFirst()
+                    .filter(emotion -> emotion.getNum() == num).findFirst()
                     .orElseThrow(() -> new NotFound("No Emotion found for value " + num + "."));
         }
         throw new NotFound("No Emotion found for value " + num + ".");
