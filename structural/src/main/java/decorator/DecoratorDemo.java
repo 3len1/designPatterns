@@ -23,7 +23,7 @@ public class DecoratorDemo {
     private static final Logger LOGGER = LoggerFactory.getLogger(DecoratorDemo.class);
 
     public static void main(String args[]) {
-        LOGGER.info("Decorator example with emotions. Have fun to try it!\n");
+        LOGGER.info("Decorator example with beverages. Have fun to try it!\n");
         LOGGER.info("There are more options, using constructors");
 
         System.out.println();
