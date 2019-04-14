@@ -10,7 +10,7 @@ public class FacadeDemo {
     private static final Logger LOGGER = LoggerFactory.getLogger(FacadeDemo.class);
 
     public static void main(String args[]) {
-        LOGGER.info("Facade example with pc build. Have fun to try it!\n");
+        LOGGER.info("Facade example with encryption. Have fun to try it!\n");
 
     }
 }

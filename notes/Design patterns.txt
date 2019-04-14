@@ -3,34 +3,38 @@ _____________________________________________________
 
 1)Creational:
 Provide instantiation mechanisms, making it easier to create objects in a way that suits the situation.
+This category emphasise on the logic of installation - constructing of objects,
+thus can control the objects that should be created for each module/class.
 
-Abstract factory
-Builder
-Factory
-Prototype
-Singleton
+Abstract factory - game card example
+Builder - user example
+Factory - shape example
+Prototype - product example
+Singleton - object example
 
 
 2)Behavioral:
 Used in communications between entities and make it easier and more flexible for these entities to communicate.
+This category emphasise on object communication.
 
-Chain of responsibility
-Command
-Interpreter
-Iterator
-Mediator
-Memento
-Null object
-Observer
+Chain of responsibility - handle request example
+Command - do/undo task example
+Observer - social media example
+State - dummagotchi example
+Strategy - credit card example
+Template method - order example
+Visitor - meal example
 
 
 3)Structural:
 Identifying a simple way to realize relationships between entities.
+This category organise classes structure so that the desired classes and features are exposed in simple way,
+additionally offers solutions to problem interfacing with different type of objects.
 
-Adapter
-Bridge
-Composite
-Decorator
+Adapter - craft example
+Bridge - printer example
+Composite - pair example
+Decorator - beverage example
 Facade
 Flyweight
 Proxy
