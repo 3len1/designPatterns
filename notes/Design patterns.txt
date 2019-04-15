@@ -35,6 +35,6 @@ Adapter - craft example
 Bridge - printer example
 Composite - pair example
 Decorator - beverage example
-Facade
-Flyweight
-Proxy
+Facade - encryption example
+Flyweight - register products example
+Proxy -
