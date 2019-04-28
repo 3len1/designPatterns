@@ -22,7 +22,7 @@ public class FolderProxy implements Folder {
     User user;
 
     public void createFolder() {
-        validateNullables(true, false);
+        validateNullable(true, false);
         if (Role.ADMIN.equals(user.getRole()) || Role.OWNER.equals(user.getRole())) {
             folder = new FolderImpl();
             folder.setFolderPath();
@@ -34,7 +34,7 @@ public class FolderProxy implements Folder {
 
     @Override
     public void setFolderPath() {
-        validateNullables(true, true);
+        validateNullable(true, true);
         if (Role.ADMIN.equals(user.getRole()) || Role.OWNER.equals(user.getRole()))
             folder.setFolderPath();
         else {
@@ -45,13 +45,13 @@ public class FolderProxy implements Folder {
 
     @Override
     public String getFolderPath() {
-        validateNullables(true, true);
+        validateNullable(true, true);
         return folder.getFolderPath();
     }
 
     @Override
     public File createFile() {
-        validateNullables(true, true);
+        validateNullable(true, true);
         if (Role.ADMIN.equals(user.getRole()) || Role.OWNER.equals(user.getRole()))
             return folder.createFile();
         else {
@@ -64,7 +64,7 @@ public class FolderProxy implements Folder {
 
     @Override
     public void deleteFile(String fileName) {
-        validateNullables(true, true);
+        validateNullable(true, true);
         if (Role.ADMIN.equals(user.getRole()) || Role.OWNER.equals(user.getRole()))
             folder.deleteFile(fileName);
         else {
@@ -75,13 +75,13 @@ public class FolderProxy implements Folder {
 
     @Override
     public void readFiles() {
-        validateNullables(true, true);
+        validateNullable(true, true);
         folder.readFiles();
     }
 
     @Override
     public void writeFiles() {
-        validateNullables(true, true);
+        validateNullable(true, true);
         if (Role.ADMIN.equals(user.getRole()) || Role.OWNER.equals(user.getRole()))
             folder.writeFiles();
         else {
@@ -92,7 +92,7 @@ public class FolderProxy implements Folder {
 
     @Override
     public void executeFiles() {
-        validateNullables(true, true);
+        validateNullable(true, true);
         if (Role.ADMIN.equals(user.getRole()) || Role.OPERATOR.equals(user.getRole()))
             folder.executeFiles();
         else {
@@ -101,7 +101,7 @@ public class FolderProxy implements Folder {
         }
     }
 
-    private void validateNullables(boolean userFlag, boolean folderFlag) {
+    private void validateNullable(boolean userFlag, boolean folderFlag) {
         if (userFlag && user == null)
             throw new NullableException(User.class, "No user found in FolderProxy");
         if (folderFlag && folder == null)

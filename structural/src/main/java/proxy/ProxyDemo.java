@@ -28,9 +28,9 @@ public class ProxyDemo {
         LOGGER.info("Create read only user");
         User readOnly = createUser(Role.READ_ONLY);
 
-        LOGGER.info("\nAdmin has all permissions to the folder {}\n", filesystem.getFolderPath());
         filesystem.setUser(admin);
         filesystem.createFolder();
+        LOGGER.info("\nAdmin has all permissions to the folder {}\n", filesystem.getFolderPath());
         filesystem.createFile();
         filesystem.createFile();
         filesystem.readFiles();
@@ -39,13 +39,13 @@ public class ProxyDemo {
         filesystem.executeFiles();
         filesystem.writeFiles();
 
-        LOGGER.info("\nOwner has read and execute permissions to the folder {}\n", filesystem.getFolderPath());
         filesystem.setUser(operator);
+        LOGGER.info("\nOwner has read and execute permissions to the folder {}\n", filesystem.getFolderPath());
         filesystem.readFiles();
         filesystem.executeFiles();
 
-        LOGGER.info("\nOwner has read and write permissions to the folder {}\n", filesystem.getFolderPath());
         filesystem.setUser(owner);
+        LOGGER.info("\nOwner has read and write permissions to the folder {}\n", filesystem.getFolderPath());
         filesystem.createFile();
         filesystem.createFile();
         filesystem.readFiles();
@@ -53,15 +53,14 @@ public class ProxyDemo {
         filesystem.deleteFile(scanner.nextLine());
         filesystem.writeFiles();
 
-        LOGGER.info("\nOwner has read permissions to the folder {}\n", filesystem.getFolderPath());
         filesystem.setUser(readOnly);
+        LOGGER.info("\nOwner has read permissions to the folder {}\n", filesystem.getFolderPath());
         filesystem.readFiles();
 
 
     }
 
     public static User createUser(Role role) {
-        LOGGER.info("Create user");
         Scanner scanner = new Scanner(System.in);
         User user = new User();
         System.out.println("Enter username:");

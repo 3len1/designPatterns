@@ -54,7 +54,7 @@ public class FolderImpl implements Folder {
     @Override
     public void deleteFile(String fileName) {
         LOGGER.info("Delete folder");
-        files.stream().filter(f -> f.getFullName().equals(fileName)).findFirst().
+        files.stream().filter(f -> f.getName().equals(fileName)).findFirst().
                 ifPresent(file -> {
                     files.remove(file);
                     LOGGER.info("File {} successfully deleted", fileName);
