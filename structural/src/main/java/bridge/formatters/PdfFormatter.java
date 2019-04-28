@@ -1,5 +1,6 @@
 package bridge.formatters;
 
+
 import bridge.enums.Label;
 import bridge.objects.Info;
 import bridge.utils.InfoUtils;

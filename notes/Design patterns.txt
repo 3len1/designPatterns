@@ -37,4 +37,4 @@ Composite - pair example
 Decorator - beverage example
 Facade - encryption example
 Flyweight - register products example
-Proxy - partitions example
+Proxy - filesystem example
